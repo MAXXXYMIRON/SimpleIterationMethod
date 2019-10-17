@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Simpleiterationmethod
+namespace MethodsSLAU
 {
     class SLAU
     {
@@ -15,11 +15,13 @@ namespace Simpleiterationmethod
         public SLAU()
         {
             Matrix = new float[5, 6]
-                      {{27, 4, -2, 8, 6, 43}, 
+                      {
+                      {27, 4, -2, 8, 6, 43}, 
                       {-3, 22, -4, -7, 3, 22}, 
                       {4, -7, 36, -2, 9, 120}, 
                       {-2, -8, -9, 28, -4, 10}, 
-                      {-9, 5, -4, 1, 25, 18}};
+                      {-9, 5, -4, 1, 25, 18}
+                      };
         }
         public SLAU(ushort RowCol)
         {
@@ -34,7 +36,7 @@ namespace Simpleiterationmethod
             }
         }
 
-        //Метод приближенного решеия
+        //Метод приближенного решения
         public float[] SimIterMeth()
         {
             float[] Xnew = new float[Matrix.GetLength(0)],
