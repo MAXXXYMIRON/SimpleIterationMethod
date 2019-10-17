@@ -1,0 +1,7 @@
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\bin\Debug\Simpleiterationmethod.exe.config
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\bin\Debug\Simpleiterationmethod.exe
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\bin\Debug\Simpleiterationmethod.pdb
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\obj\Debug\Simpleiterationmethod.csprojAssemblyReference.cache
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\obj\Debug\Simpleiterationmethod.csproj.CoreCompileInputs.cache
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\obj\Debug\Simpleiterationmethod.exe
+C:\Users\KNIGH\Desktop\Vich Math\SimpleIterationMethod\Simpleiterationmethod\obj\Debug\Simpleiterationmethod.pdb
