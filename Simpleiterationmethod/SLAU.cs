@@ -37,21 +37,41 @@ namespace MethodsSLAU
         }
 
         //Метод приближенного решения
-        public float[] SimIterMeth()
+        public float[] MethZeygAndIter(char flag)
         {
             float[] Xnew = new float[Matrix.GetLength(0)],
                     Xold = new float[Xnew.Length];
-            
+
             do
             {
                 Xnew.CopyTo(Xold, 0);
 
                 for (int i = 0; i < Xnew.Length; i++)
-                    Xnew[i] = elX(Xold, i) / Matrix[i, i];
+                    if (flag == 'i')
+                    {
+                        Xnew[i] = elX(Xold, i) / Matrix[i, i];
+                    }
+                    else
+                    { 
+                        Xnew[i] = elX(Xnew, i) / Matrix[i, i];
+                    }
 
             } while (!StopIter(Xold, Xnew));
 
             return Xnew;
+        }
+        //Поиск нового элемента х в методе приближенных итераций и методе Зейгеля
+        private float elX(float [] X, int index)
+        {
+            float ResX = Matrix[index, Matrix.GetLength(1) - 1];
+
+            for (int i = 0; i < X.Length; i++)
+            {
+                if (i == index) continue;
+                ResX -= Matrix[index, i] * X[i];
+            }
+
+            return ResX;
         }
 
         //Проверка на необходимость завершения расчета новых Х
@@ -64,20 +84,6 @@ namespace MethodsSLAU
                 if ((Math.Abs(Xnew[i] - Xold[i])) > E) return false;
             }
             return true;
-        }
-
-        //Поиск элемента х нового
-        private float elX(float [] Xold, int index)
-        {
-            float ResX = Matrix[index, Matrix.GetLength(1) - 1];
-
-            for (int i = 0; i < Xold.Length; i++)
-            {
-                if (i == index) continue;
-                ResX -= Matrix[index, i] * Xold[i];
-            }
-
-            return ResX;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace MethodsSLAU
         {
             SLAU Matr = new SLAU();
 
-            float[] x = Matr.SimIterMeth();
+            float[] x = Matr.MethZeygAndIter('z');
             for (int i = 0; i < x.Length; i++)
             {
                 Console.WriteLine(x[i]);
